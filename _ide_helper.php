@@ -22489,6 +22489,790 @@ namespace Illuminate\Support\Facades {
             }
     }
 
+namespace Livewire {
+    /**
+     * 
+     *
+     * @see \Livewire\LivewireManager
+     */
+    class Livewire {
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function setProvider($provider)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->setProvider($provider);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function provide($callback)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->provide($callback);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function component($name, $class = null)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->component($name, $class);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function componentHook($hook)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->componentHook($hook);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function propertySynthesizer($synth)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->propertySynthesizer($synth);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function directive($name, $callback)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->directive($name, $callback);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function precompiler($callback)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->precompiler($callback);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function new($name, $id = null)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->new($name, $id);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function isDiscoverable($componentNameOrClass)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->isDiscoverable($componentNameOrClass);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function resolveMissingComponent($resolver)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->resolveMissingComponent($resolver);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function mount($name, $params = [], $key = null)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->mount($name, $params, $key);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function snapshot($component)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->snapshot($component);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function fromSnapshot($snapshot)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->fromSnapshot($snapshot);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function listen($eventName, $callback)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->listen($eventName, $callback);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function current()
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->current();
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function update($snapshot, $diff, $calls)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->update($snapshot, $diff, $calls);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function updateProperty($component, $path, $value)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->updateProperty($component, $path, $value);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function isLivewireRequest()
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->isLivewireRequest();
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function componentHasBeenRendered()
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->componentHasBeenRendered();
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function forceAssetInjection()
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->forceAssetInjection();
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function setUpdateRoute($callback)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->setUpdateRoute($callback);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function getUpdateUri()
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->getUpdateUri();
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function setScriptRoute($callback)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->setScriptRoute($callback);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function useScriptTagAttributes($attributes)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->useScriptTagAttributes($attributes);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function withUrlParams($params)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->withUrlParams($params);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function withQueryParams($params)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->withQueryParams($params);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function withCookie($name, $value)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->withCookie($name, $value);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function withCookies($cookies)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->withCookies($cookies);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function withHeaders($headers)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->withHeaders($headers);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function withoutLazyLoading()
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->withoutLazyLoading();
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function test($name, $params = [])
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->test($name, $params);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function visit($name)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->visit($name);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function actingAs($user, $driver = null)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->actingAs($user, $driver);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function isRunningServerless()
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->isRunningServerless();
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function addPersistentMiddleware($middleware)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->addPersistentMiddleware($middleware);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function setPersistentMiddleware($middleware)
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->setPersistentMiddleware($middleware);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function getPersistentMiddleware()
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->getPersistentMiddleware();
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function flushState()
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->flushState();
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function originalUrl()
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->originalUrl();
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function originalPath()
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->originalPath();
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function originalMethod()
+        {
+            /** @var \Livewire\LivewireManager $instance */
+            return $instance->originalMethod();
+        }
+
+            }
+    }
+
+namespace Flasher\Laravel\Facade {
+    /**
+     * 
+     *
+     * @method static NotificationBuilder title(string $message)
+     * @method static NotificationBuilder message(string $message)
+     * @method static NotificationBuilder type(string $message)
+     * @method static NotificationBuilder options(array<string, mixed> $options, bool $merge = true)
+     * @method static NotificationBuilder option(string $name, $value)
+     * @method static NotificationBuilder priority(int $priority)
+     * @method static NotificationBuilder hops(int $amount)
+     * @method static NotificationBuilder keep()
+     * @method static NotificationBuilder delay(int $delay)
+     * @method static NotificationBuilder translate(array<string, mixed> $parameters = [], ?string $locale = null)
+     * @method static NotificationBuilder handler(string $handler)
+     * @method static NotificationBuilder context(array<string, mixed> $context)
+     * @method static NotificationBuilder when(bool|\Closure $condition)
+     * @method static NotificationBuilder unless(bool|\Closure $condition)
+     * @method static NotificationBuilder with(StampInterface[] $stamps = array())
+     * @method static NotificationBuilder withStamp(StampInterface $stamp)
+     * @method static Envelope            success(string $message, array<string, mixed> $options = [], ?string $title = null)
+     * @method static Envelope            error(string $message, array<string, mixed> $options = [], ?string $title = null)
+     * @method static Envelope            info(string $message, array<string, mixed> $options = [], ?string $title = null)
+     * @method static Envelope            warning(string $message, array<string, mixed> $options = [], ?string $title = null)
+     * @method static Envelope            flash(?string $type = null, ?string $message = null, array<string, mixed> $options = [], ?string $title = null)
+     * @method static Envelope            preset(string $preset, array<string, mixed> $parameters = [])
+     * @method static Envelope            operation(string $operation, string|object|null $resource = null)
+     * @method static Envelope            created(string|object|null $resource = null)
+     * @method static Envelope            updated(string|object|null $resource = null)
+     * @method static Envelope            saved(string|object|null $resource = null)
+     * @method static Envelope            deleted(string|object|null $resource = null)
+     * @method static Envelope            push()
+     * @method static Envelope            addPreset(string $preset, array<string, mixed> $parameters = [])
+     * @method static Envelope            addCreated(string|object|null $resource = null)
+     * @method static Envelope            addUpdated(string|object|null $resource = null)
+     * @method static Envelope            addDeleted(string|object|null $resource = null)
+     * @method static Envelope            addSaved(string|object|null $resource = null)
+     * @method static Envelope            addOperation(string $operation, string|object|null $resource = null)
+     * @method static Envelope            getEnvelope()
+     */
+    class Flasher {
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function use($alias)
+        {
+            /** @var \Flasher\Prime\Flasher $instance */
+            return $instance->use($alias);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function create($alias)
+        {
+            /** @var \Flasher\Prime\Flasher $instance */
+            return $instance->create($alias);
+        }
+
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function render($presenter = 'html', $criteria = [], $context = [])
+        {
+            /** @var \Flasher\Prime\Flasher $instance */
+            return $instance->render($presenter, $criteria, $context);
+        }
+
+            }
+    }
+
+namespace Flasher\Toastr\Laravel\Facade {
+    /**
+     * 
+     *
+     * @method static ToastrBuilder flash(StampInterface[] $stamps = array())
+     * @method static ToastrBuilder type(string $type, string $message = null, array<string, mixed> $options = array())
+     * @method static ToastrBuilder message(string $message)
+     * @method static ToastrBuilder options(array<string, mixed> $options, bool $merge = true)
+     * @method static ToastrBuilder option(string $name, $value)
+     * @method static ToastrBuilder success(string $message = null, array<string, mixed> $options = array())
+     * @method static ToastrBuilder error(string $message = null, array<string, mixed> $options = array())
+     * @method static ToastrBuilder info(string $message = null, array<string, mixed> $options = array())
+     * @method static ToastrBuilder warning(string $message = null, array<string, mixed> $options = array())
+     * @method static ToastrBuilder priority(int $priority)
+     * @method static ToastrBuilder hops(int $amount)
+     * @method static ToastrBuilder keep()
+     * @method static ToastrBuilder delay(int $delay)
+     * @method static ToastrBuilder now()
+     * @method static ToastrBuilder with(StampInterface[] $stamps = array())
+     * @method static ToastrBuilder withStamp(StampInterface $stamp)
+     * @method static ToastrBuilder handler(string $handler)
+     * @method static Envelope      getEnvelope()
+     * @method static ToastrBuilder title(string $title)
+     * @method static ToastrBuilder closeButton(bool $closeButton = true)
+     * @method static ToastrBuilder closeClass(string $closeClass)
+     * @method static ToastrBuilder closeDuration(int $closeDuration)
+     * @method static ToastrBuilder closeEasing(string $closeEasing)
+     * @method static ToastrBuilder closeHtml(string $closeHtml)
+     * @method static ToastrBuilder closeMethod(string $closeMethod)
+     * @method static ToastrBuilder closeOnHover(bool $closeOnHover = true)
+     * @method static ToastrBuilder containerId(string $containerId)
+     * @method static ToastrBuilder debug(bool $debug = true)
+     * @method static ToastrBuilder escapeHtml(bool $escapeHtml = true)
+     * @method static ToastrBuilder extendedTimeOut(int $extendedTimeOut)
+     * @method static ToastrBuilder hideDuration(int $hideDuration)
+     * @method static ToastrBuilder hideEasing(string $hideEasing)
+     * @method static ToastrBuilder hideMethod(string $hideMethod)
+     * @method static ToastrBuilder iconClass(string $iconClass)
+     * @method static ToastrBuilder messageClass(string $messageClass)
+     * @method static ToastrBuilder newestOnTop(bool $newestOnTop = true)
+     * @method static ToastrBuilder onHidden(string $onHidden)
+     * @method static ToastrBuilder onShown(string $onShown)
+     * @method static ToastrBuilder positionClass(string $positionClass)
+     * @method static ToastrBuilder preventDuplicates(bool $preventDuplicates = true)
+     * @method static ToastrBuilder progressBar(bool $progressBar = true)
+     * @method static ToastrBuilder progressClass(string $progressClass)
+     * @method static ToastrBuilder rtl(bool $rtl = true)
+     * @method static ToastrBuilder showDuration(int $showDuration)
+     * @method static ToastrBuilder showEasing(string $showEasing)
+     * @method static ToastrBuilder showMethod(string $showMethod)
+     * @method static ToastrBuilder tapToDismiss(bool $tapToDismiss = true)
+     * @method static ToastrBuilder target(string $target)
+     * @method static ToastrBuilder timeOut(int $timeOut, bool $extendedTimeOut = null)
+     * @method static ToastrBuilder titleClass(string $titleClass)
+     * @method static ToastrBuilder toastClass(string $toastClass)
+     * @method static ToastrBuilder persistent()
+     */
+    class Toastr {
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function createNotificationBuilder()
+        {
+            /** @var \Flasher\Toastr\Prime\Toastr $instance */
+            return $instance->createNotificationBuilder();
+        }
+
+            }
+    }
+
+namespace Yajra\DataTables\Facades {
+    /**
+     * 
+     *
+     * @mixin \Yajra\DataTables\DataTables
+     * @see \Yajra\DataTables\DataTables
+     */
+    class DataTables {
+        /**
+         * Make a DataTable instance from source.
+         * 
+         * Alias of make for backward compatibility.
+         *
+         * @param object $source
+         * @return \Yajra\DataTables\DataTableAbstract 
+         * @throws \Exception
+         * @static 
+         */
+        public static function of($source)
+        {
+            return \Yajra\DataTables\DataTables::of($source);
+        }
+
+        /**
+         * Make a DataTable instance from source.
+         *
+         * @param object $source
+         * @return \Yajra\DataTables\DataTableAbstract 
+         * @throws \Yajra\DataTables\Exceptions\Exception
+         * @static 
+         */
+        public static function make($source)
+        {
+            return \Yajra\DataTables\DataTables::make($source);
+        }
+
+        /**
+         * Get request object.
+         *
+         * @static 
+         */
+        public static function getRequest()
+        {
+            /** @var \Yajra\DataTables\DataTables $instance */
+            return $instance->getRequest();
+        }
+
+        /**
+         * Get config instance.
+         *
+         * @static 
+         */
+        public static function getConfig()
+        {
+            /** @var \Yajra\DataTables\DataTables $instance */
+            return $instance->getConfig();
+        }
+
+        /**
+         * DataTables using query builder.
+         *
+         * @throws \Yajra\DataTables\Exceptions\Exception
+         * @static 
+         */
+        public static function query($builder)
+        {
+            /** @var \Yajra\DataTables\DataTables $instance */
+            return $instance->query($builder);
+        }
+
+        /**
+         * DataTables using Eloquent Builder.
+         *
+         * @throws \Yajra\DataTables\Exceptions\Exception
+         * @static 
+         */
+        public static function eloquent($builder)
+        {
+            /** @var \Yajra\DataTables\DataTables $instance */
+            return $instance->eloquent($builder);
+        }
+
+        /**
+         * DataTables using Collection.
+         *
+         * @param \Illuminate\Support\Collection<array-key, array>|array $collection
+         * @throws \Yajra\DataTables\Exceptions\Exception
+         * @static 
+         */
+        public static function collection($collection)
+        {
+            /** @var \Yajra\DataTables\DataTables $instance */
+            return $instance->collection($collection);
+        }
+
+        /**
+         * DataTables using Collection.
+         *
+         * @param \Illuminate\Http\Resources\Json\AnonymousResourceCollection<array-key, array>|array $resource
+         * @return \Yajra\DataTables\ApiResourceDataTable|\Yajra\DataTables\DataTableAbstract 
+         * @static 
+         */
+        public static function resource($resource)
+        {
+            /** @var \Yajra\DataTables\DataTables $instance */
+            return $instance->resource($resource);
+        }
+
+        /**
+         * 
+         *
+         * @throws \Yajra\DataTables\Exceptions\Exception
+         * @static 
+         */
+        public static function validateDataTable($engine, $parent)
+        {
+            /** @var \Yajra\DataTables\DataTables $instance */
+            return $instance->validateDataTable($engine, $parent);
+        }
+
+        /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param object|callable $macro
+         * @param-closure-this static  $macro
+         * @return void 
+         * @static 
+         */
+        public static function macro($name, $macro)
+        {
+            \Yajra\DataTables\DataTables::macro($name, $macro);
+        }
+
+        /**
+         * Mix another object into the class.
+         *
+         * @param object $mixin
+         * @param bool $replace
+         * @return void 
+         * @throws \ReflectionException
+         * @static 
+         */
+        public static function mixin($mixin, $replace = true)
+        {
+            \Yajra\DataTables\DataTables::mixin($mixin, $replace);
+        }
+
+        /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */
+        public static function hasMacro($name)
+        {
+            return \Yajra\DataTables\DataTables::hasMacro($name);
+        }
+
+        /**
+         * Flush the existing macros.
+         *
+         * @return void 
+         * @static 
+         */
+        public static function flushMacros()
+        {
+            \Yajra\DataTables\DataTables::flushMacros();
+        }
+
+            }
+    }
+
 namespace Illuminate\Http {
     /**
      * 
@@ -22568,6 +23352,206 @@ namespace Illuminate\Http {
         public static function hasValidRelativeSignatureWhileIgnoring($ignoreQuery = [])
         {
             return \Illuminate\Http\Request::hasValidRelativeSignatureWhileIgnoring($ignoreQuery);
+        }
+
+            }
+    }
+
+namespace Yajra\DataTables {
+    /**
+     * 
+     *
+     */
+    class DataTables {
+        /**
+         * 
+         *
+         * @see \Yajra\DataTables\HtmlServiceProvider::register()
+         * @return \Yajra\DataTables\Html\Builder 
+         * @static 
+         */
+        public static function getHtmlBuilder()
+        {
+            return \Yajra\DataTables\DataTables::getHtmlBuilder();
+        }
+
+            }
+    /**
+     * 
+     *
+     * @property-read mixed $transformer
+     * @property-read mixed $serializer
+     * @see https://github.com/yajra/laravel-datatables-fractal for transformer related methods.
+     */
+    class DataTableAbstract {
+        /**
+         * 
+         *
+         * @see \Yajra\DataTables\FractalServiceProvider::registerMacro()
+         * @param mixed $transformer
+         * @static 
+         */
+        public static function setTransformer($transformer)
+        {
+            return \Yajra\DataTables\DataTableAbstract::setTransformer($transformer);
+        }
+
+        /**
+         * 
+         *
+         * @see \Yajra\DataTables\FractalServiceProvider::registerMacro()
+         * @param mixed $transformer
+         * @static 
+         */
+        public static function addTransformer($transformer)
+        {
+            return \Yajra\DataTables\DataTableAbstract::addTransformer($transformer);
+        }
+
+        /**
+         * 
+         *
+         * @see \Yajra\DataTables\FractalServiceProvider::registerMacro()
+         * @param mixed $serializer
+         * @static 
+         */
+        public static function setSerializer($serializer)
+        {
+            return \Yajra\DataTables\DataTableAbstract::setSerializer($serializer);
+        }
+
+            }
+    }
+
+namespace Illuminate\Routing {
+    /**
+     * 
+     *
+     */
+    class Route {
+        /**
+         * 
+         *
+         * @see \Livewire\Features\SupportLazyLoading\SupportLazyLoading::registerRouteMacro()
+         * @param mixed $enabled
+         * @static 
+         */
+        public static function lazy($enabled = true)
+        {
+            return \Illuminate\Routing\Route::lazy($enabled);
+        }
+
+            }
+    }
+
+namespace Illuminate\View {
+    /**
+     * 
+     *
+     */
+    class ComponentAttributeBag {
+        /**
+         * 
+         *
+         * @see \Livewire\Features\SupportBladeAttributes\SupportBladeAttributes::provide()
+         * @param mixed $name
+         * @static 
+         */
+        public static function wire($name)
+        {
+            return \Illuminate\View\ComponentAttributeBag::wire($name);
+        }
+
+            }
+    /**
+     * 
+     *
+     */
+    class View {
+        /**
+         * 
+         *
+         * @see \Livewire\Features\SupportPageComponents\SupportPageComponents::registerLayoutViewMacros()
+         * @param mixed $data
+         * @static 
+         */
+        public static function layoutData($data = [])
+        {
+            return \Illuminate\View\View::layoutData($data);
+        }
+
+        /**
+         * 
+         *
+         * @see \Livewire\Features\SupportPageComponents\SupportPageComponents::registerLayoutViewMacros()
+         * @param mixed $section
+         * @static 
+         */
+        public static function section($section)
+        {
+            return \Illuminate\View\View::section($section);
+        }
+
+        /**
+         * 
+         *
+         * @see \Livewire\Features\SupportPageComponents\SupportPageComponents::registerLayoutViewMacros()
+         * @param mixed $title
+         * @static 
+         */
+        public static function title($title)
+        {
+            return \Illuminate\View\View::title($title);
+        }
+
+        /**
+         * 
+         *
+         * @see \Livewire\Features\SupportPageComponents\SupportPageComponents::registerLayoutViewMacros()
+         * @param mixed $slot
+         * @static 
+         */
+        public static function slot($slot)
+        {
+            return \Illuminate\View\View::slot($slot);
+        }
+
+        /**
+         * 
+         *
+         * @see \Livewire\Features\SupportPageComponents\SupportPageComponents::registerLayoutViewMacros()
+         * @param mixed $view
+         * @param mixed $params
+         * @static 
+         */
+        public static function extends($view, $params = [])
+        {
+            return \Illuminate\View\View::extends($view, $params);
+        }
+
+        /**
+         * 
+         *
+         * @see \Livewire\Features\SupportPageComponents\SupportPageComponents::registerLayoutViewMacros()
+         * @param mixed $view
+         * @param mixed $params
+         * @static 
+         */
+        public static function layout($view, $params = [])
+        {
+            return \Illuminate\View\View::layout($view, $params);
+        }
+
+        /**
+         * 
+         *
+         * @see \Livewire\Features\SupportPageComponents\SupportPageComponents::registerLayoutViewMacros()
+         * @param callable $callback
+         * @static 
+         */
+        public static function response($callback)
+        {
+            return \Illuminate\View\View::response($callback);
         }
 
             }
@@ -27256,6 +28240,10 @@ namespace  {
     class Validator extends \Illuminate\Support\Facades\Validator {}
     class View extends \Illuminate\Support\Facades\View {}
     class Vite extends \Illuminate\Support\Facades\Vite {}
+    class Livewire extends \Livewire\Livewire {}
+    class Flasher extends \Flasher\Laravel\Facade\Flasher {}
+    class Toastr extends \Flasher\Toastr\Laravel\Facade\Toastr {}
+    class DataTables extends \Yajra\DataTables\Facades\DataTables {}
 }
 
 
