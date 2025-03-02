@@ -7,34 +7,13 @@
             </div>
             <div class="col-xl-8 col-lg-7">
                 <div class="row feature-blocks bg-gray justify-content-between">
-                    <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
-                        <i class="ti-book mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
-                        <h3 class="mb-xl-4 mb-lg-3 mb-4">Scholorship News</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut labore
-                            et dolore magna aliqua. Ut enim ad</p>
-                    </div>
-                    <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
-                        <i class="ti-blackboard mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
-                        <h3 class="mb-xl-4 mb-lg-3 mb-4">Our Notice Board</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut labore
-                            et dolore magna aliqua. Ut enim ad</p>
-                    </div>
-                    <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
-                        <i class="ti-agenda mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
-                        <h3 class="mb-xl-4 mb-lg-3 mb-4">Our Achievements</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut labore
-                            et dolore magna aliqua. Ut enim ad</p>
-                    </div>
-                    <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
-                        <i class="ti-write mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
-                        <h3 class="mb-xl-4 mb-lg-3 mb-4">Admission Now</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut labore
-                            et dolore magna aliqua. Ut enim ad</p>
-                    </div>
+                    @foreach ($bannerFeatures as $bannerFeature)
+                        <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
+                            <i class="{{ $bannerFeature->icon }} mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+                            <h3 class="mb-xl-4 mb-lg-3 mb-4">{{ $bannerFeature->title }}</h3>
+                            <p>{{ $bannerFeature->description }}</p>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>
