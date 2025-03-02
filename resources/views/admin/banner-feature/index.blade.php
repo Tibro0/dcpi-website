@@ -4,6 +4,8 @@
     <title>Admin | Banner Feature</title>
     <!-- dataTables css -->
     <link rel="stylesheet" href="{{ asset('admin/assets/css/dataTables-bootstrap4.css') }}">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="{{ asset('frontend/plugins/themify-icons/themify-icons.css') }}">
 @endpush
 
 @section('admin-content')

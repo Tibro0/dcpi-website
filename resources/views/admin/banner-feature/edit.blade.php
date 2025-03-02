@@ -20,9 +20,8 @@
                     @csrf
                     @method('PUT')
                     <div class="form-group">
-                        <label>Icon</label><br>
-                        <button name="icon" data-icon="{{ $bannerFeature->icon }}" class="btn btn-primary"
-                            data-selected-class="btn-danger" data-unselected-class="btn-info" role="iconpicker"></button>
+                        <label>Icon <code>(Themify Icon)</code></label>
+                        <input type="text" name="icon" value="{{ $bannerFeature->icon }}" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>Title</label>

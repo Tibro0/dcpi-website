@@ -19,9 +19,8 @@
                 <form action="{{ route('admin.banner-feature.store') }}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <label>Icon</label><br>
-                        <button name="icon" class="btn btn-primary" data-selected-class="btn-danger"
-                            data-unselected-class="btn-info" role="iconpicker"></button>
+                        <label>Icon <code>(Themify Icon)</code></label>
+                        <input type="text" name="icon" value="{{ old('icon') }}" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>Title</label>
