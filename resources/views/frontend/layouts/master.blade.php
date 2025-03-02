@@ -24,6 +24,8 @@
     <!--Favicon-->
     <link rel="shortcut icon" href="{{ asset('frontend/images/favicon.ico') }}" type="image/x-icon">
     <link rel="icon" href="{{ asset('frontend/images/favicon.ico') }}" type="image/x-icon">
+    <!-- Toastr CSS link -->
+    <link rel="stylesheet" href="{{ asset('frontend/css/toastr.min.css') }}">
     @stack('frontend-css')
 </head>
 
@@ -128,6 +130,17 @@
     <script src="{{ asset('frontend/plugins/google-map/gmap.js') }}"></script>
     <!-- Main Script -->
     <script src="{{ asset('frontend/js/script.js') }}"></script>
+    <!-- Toastr js Links -->
+    <script src="{{ asset('frontend/js/toastr.min.js') }}"></script>
+    <!-- show dynamic validation message -->
+    <script>
+        toastr.options.progressBar = true;
+        @if ($errors->any())
+            @foreach ($errors->all() as $error)
+                toastr.error("{{ $error }}")
+            @endforeach
+        @endif
+    </script>
     @stack('frontend-js')
 </body>
 

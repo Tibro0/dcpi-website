@@ -1,25 +1,48 @@
-<x-guest-layout>
-    <div class="mb-4 text-sm text-gray-600">
-        {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
-    </div>
+@extends('frontend.layouts.master')
 
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+@push('frontend-css')
+    <title>Educenter | Forgot Password</title>
+@endpush
 
-    <form method="POST" action="{{ route('password.email') }}">
-        @csrf
-
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+@section('frontend-content')
+    <!-- Page title Start -->
+    <section class="page-title-section overlay" data-background="{{ asset('frontend/images/backgrounds/page-title.jpg') }}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <ul class="list-inline custom-breadcrumb">
+                        <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="javascript:;">Forgot
+                                Password</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </section>
+    <!-- Page title End -->
 
-        <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
-                {{ __('Email Password Reset Link') }}
-            </x-primary-button>
+    <!-- Page Content Start -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3 shadow-lg p-5 bg-body rounded">
+                    <h2 class="text-center mb-4">Forgot Password</h2>
+                    <form action="{{ route('password.email') }}" method="POST" class="row">
+                        @csrf
+                        <div class="col-12">
+                            <input type="email" name="email" value="{{ old('email') }}" class="form-control mb-3"
+                                placeholder="Email">
+                        </div>
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-primary">Verify Email</button>
+                        </div>
+                        <div class="col-6">
+                            <p class="text-right"><a href="{{ route('login') }}">Login</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-    </form>
-</x-guest-layout>
+    </section>
+    <!-- Page Content End -->
+@endsection
