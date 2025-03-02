@@ -16,6 +16,31 @@ namespace App\Models{
  * 
  *
  * @property int $id
+ * @property string $icon
+ * @property string $title
+ * @property string $description
+ * @property int $status
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|BannerFeature newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|BannerFeature newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|BannerFeature query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|BannerFeature whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|BannerFeature whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|BannerFeature whereIcon($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|BannerFeature whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|BannerFeature whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|BannerFeature whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|BannerFeature whereUpdatedAt($value)
+ */
+	class BannerFeature extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
+ * @property int $id
  * @property string $title
  * @property string $description
  * @property string|null $button_text
