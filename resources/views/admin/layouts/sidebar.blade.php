@@ -23,6 +23,10 @@
                     <li class="active"><a class="nav-link" href="{{ route('admin.banner-feature.index') }}">Banner
                             Feature</a>
                     </li>
+                    <li class="active"><a class="nav-link"
+                            href="{{ route('admin.front-page-about-us-section.index') }}">About Us
+                            Section</a>
+                    </li>
                 </ul>
             </li>
 

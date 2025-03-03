@@ -40,6 +40,17 @@ namespace App\Models{
 /**
  * 
  *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageAboutUsSection newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageAboutUsSection newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageAboutUsSection query()
+ */
+	class FrontPageAboutUsSection extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
  * @property int $id
  * @property string $title
  * @property string $description
