@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\BannerFeatureController;
+use App\Http\Controllers\Admin\DiplomaEngineeringCourseController;
 use App\Http\Controllers\Admin\FrontPageAboutUsSectionController;
 use App\Http\Controllers\Admin\SliderController;
 use Illuminate\Support\Facades\Route;
@@ -18,3 +19,6 @@ Route::resource('banner-feature', BannerFeatureController::class);
 /** Front Page About Us Section Routes */
 Route::get('front-page-about-us-section/index', [FrontPageAboutUsSectionController::class, 'index'])->name('front-page-about-us-section.index');
 Route::put('front-page-about-us-section/update', [FrontPageAboutUsSectionController::class, 'update'])->name('front-page-about-us-section.update');
+
+/** Diploma Engineering Course Routes */
+Route::resource('diploma-engineering-course', DiplomaEngineeringCourseController::class);

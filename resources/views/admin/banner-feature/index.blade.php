@@ -18,7 +18,7 @@
             <div class="card-header">
                 <h4>All Banner Feature</h4>
                 <div class="card-header-action">
-                    <a href="{{ route('admin.banner-feature.create') }}" class="btn btn-primary">Create Slider</a>
+                    <a href="{{ route('admin.banner-feature.create') }}" class="btn btn-primary">Create New</a>
                 </div>
             </div>
             <div class="card-body">

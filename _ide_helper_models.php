@@ -40,9 +40,36 @@ namespace App\Models{
 /**
  * 
  *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DiplomaEngineeringCourse newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DiplomaEngineeringCourse newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DiplomaEngineeringCourse query()
+ */
+	class DiplomaEngineeringCourse extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
+ * @property int $id
+ * @property string $image
+ * @property string $title
+ * @property string $description
+ * @property string|null $button_name
+ * @property string|null $button_url
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageAboutUsSection newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageAboutUsSection newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageAboutUsSection query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageAboutUsSection whereButtonName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageAboutUsSection whereButtonUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageAboutUsSection whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageAboutUsSection whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageAboutUsSection whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageAboutUsSection whereImage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageAboutUsSection whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageAboutUsSection whereUpdatedAt($value)
  */
 	class FrontPageAboutUsSection extends \Eloquent {}
 }
