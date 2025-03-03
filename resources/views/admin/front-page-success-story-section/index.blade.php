@@ -28,7 +28,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Video Link</label>
+                        <label>Video Link <code>(Youtube Video Link)</code></label>
                         <input type="text" name="video_link" value="{{ @$frontPageSuccessStorySection->video_link }}"
                             class="form-control">
                     </div>
