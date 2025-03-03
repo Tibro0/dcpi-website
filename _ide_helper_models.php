@@ -40,9 +40,35 @@ namespace App\Models{
 /**
  * 
  *
+ * @property int $id
+ * @property string $image
+ * @property string $name
+ * @property string $slug
+ * @property string $month
+ * @property string $duration
+ * @property string $course_fee
+ * @property string $short_description
+ * @property string $long_description
+ * @property int $priority_number
+ * @property int $status
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder<static>|DiplomaEngineeringCourse newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|DiplomaEngineeringCourse newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|DiplomaEngineeringCourse query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DiplomaEngineeringCourse whereCourseFee($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DiplomaEngineeringCourse whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DiplomaEngineeringCourse whereDuration($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DiplomaEngineeringCourse whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DiplomaEngineeringCourse whereImage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DiplomaEngineeringCourse whereLongDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DiplomaEngineeringCourse whereMonth($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DiplomaEngineeringCourse whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DiplomaEngineeringCourse wherePriorityNumber($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DiplomaEngineeringCourse whereShortDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DiplomaEngineeringCourse whereSlug($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DiplomaEngineeringCourse whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|DiplomaEngineeringCourse whereUpdatedAt($value)
  */
 	class DiplomaEngineeringCourse extends \Eloquent {}
 }
@@ -72,6 +98,17 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageAboutUsSection whereUpdatedAt($value)
  */
 	class FrontPageAboutUsSection extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageCtaSection newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageCtaSection newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageCtaSection query()
+ */
+	class FrontPageCtaSection extends \Eloquent {}
 }
 
 namespace App\Models{

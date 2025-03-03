@@ -1,4 +1,4 @@
-<section class="section bg-cover" data-background="images/backgrounds/success-story.jpg">
+<section class="section bg-cover" data-background="{{ asset('frontend/images/backgrounds/success-story.jpg') }}">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-sm-4 position-relative success-video">

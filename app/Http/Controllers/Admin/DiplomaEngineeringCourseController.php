@@ -8,6 +8,7 @@ use App\Models\DiplomaEngineeringCourse;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManager;
 use Intervention\Image\Drivers\Gd\Driver;
+use Illuminate\Support\Str;
 
 class DiplomaEngineeringCourseController extends Controller
 {
@@ -34,7 +35,7 @@ class DiplomaEngineeringCourseController extends Controller
     {
         $request->validate([
             'image' =>['required', 'image', 'max:2000'],
-            'name' => ['required', 'max:255'],
+            'name' => ['required', 'max:255', 'unique:diploma_engineering_courses,name'],
             'month' => ['required', 'max:255'],
             'duration' => ['required', 'max:255'],
             'course_fee' => ['required', 'max:255'],
@@ -57,6 +58,7 @@ class DiplomaEngineeringCourseController extends Controller
             $diplomaEngineeringCourse = new DiplomaEngineeringCourse();
             $diplomaEngineeringCourse->image = $save_url;
             $diplomaEngineeringCourse->name = $request->name;
+            $diplomaEngineeringCourse->slug = Str::slug($request->name);
             $diplomaEngineeringCourse->month = $request->month;
             $diplomaEngineeringCourse->duration = $request->duration;
             $diplomaEngineeringCourse->course_fee = $request->course_fee;
@@ -95,7 +97,7 @@ class DiplomaEngineeringCourseController extends Controller
     {
         $request->validate([
             'image' =>['nullable', 'image', 'max:2000'],
-            'name' => ['required', 'max:255'],
+            'name' => ['required', 'max:255', 'unique:diploma_engineering_courses,name,'.$id],
             'month' => ['required', 'max:255'],
             'duration' => ['required', 'max:255'],
             'course_fee' => ['required', 'max:255'],
@@ -118,6 +120,7 @@ class DiplomaEngineeringCourseController extends Controller
             $diplomaEngineeringCourse = DiplomaEngineeringCourse::findOrFail($id);
             $diplomaEngineeringCourse->image = $save_url;
             $diplomaEngineeringCourse->name = $request->name;
+            $diplomaEngineeringCourse->slug = Str::slug($request->name);
             $diplomaEngineeringCourse->month = $request->month;
             $diplomaEngineeringCourse->duration = $request->duration;
             $diplomaEngineeringCourse->course_fee = $request->course_fee;
@@ -136,6 +139,7 @@ class DiplomaEngineeringCourseController extends Controller
         }else{
             $diplomaEngineeringCourse = DiplomaEngineeringCourse::findOrFail($id);
             $diplomaEngineeringCourse->name = $request->name;
+            $diplomaEngineeringCourse->slug = Str::slug($request->name);
             $diplomaEngineeringCourse->month = $request->month;
             $diplomaEngineeringCourse->duration = $request->duration;
             $diplomaEngineeringCourse->course_fee = $request->course_fee;

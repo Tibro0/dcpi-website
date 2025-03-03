@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('diploma_engineering_courses', function (Blueprint $table) {
             $table->id();
             $table->string('image');
-            $table->string('name');
+            $table->string('name')->unique();
+            $table->string('slug');
             $table->string('month');
             $table->string('duration');
             $table->string('course_fee');
