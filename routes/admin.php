@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\BannerFeatureController;
 use App\Http\Controllers\Admin\DiplomaEngineeringCourseController;
+use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\FrontPageAboutUsSectionController;
 use App\Http\Controllers\Admin\FrontPageCtaSectionController;
 use App\Http\Controllers\Admin\FrontPageSuccessStorySectionController;
@@ -33,3 +34,6 @@ Route::put('front-page-cta-section/update', [FrontPageCtaSectionController::clas
 /** Front Page Success Story Section Routes */
 Route::get('front-page-success-story-section/index', [FrontPageSuccessStorySectionController::class, 'index'])->name('front-page-success-story-section.index');
 Route::put('front-page-success-story-section/update', [FrontPageSuccessStorySectionController::class, 'update'])->name('front-page-success-story-section.update');
+
+/** Events Routes */
+Route::resource('event', EventController::class);

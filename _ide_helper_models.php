@@ -77,6 +77,17 @@ namespace App\Models{
 /**
  * 
  *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Event newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Event newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Event query()
+ */
+	class Event extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
  * @property int $id
  * @property string $image
  * @property string $title
@@ -129,9 +140,23 @@ namespace App\Models{
 /**
  * 
  *
+ * @property int $id
+ * @property string $image
+ * @property string|null $video_link
+ * @property string $title
+ * @property string $description
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageSuccessStorySection newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageSuccessStorySection newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageSuccessStorySection query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageSuccessStorySection whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageSuccessStorySection whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageSuccessStorySection whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageSuccessStorySection whereImage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageSuccessStorySection whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageSuccessStorySection whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageSuccessStorySection whereVideoLink($value)
  */
 	class FrontPageSuccessStorySection extends \Eloquent {}
 }

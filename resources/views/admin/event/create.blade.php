@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 
 @push('admin-css')
-    <title>Admin | Diploma Engineering Course</title>
+    <title>Admin | Event</title>
     <!-- Summernote-->
     <link rel="stylesheet" href="{{ asset('admin/assets/modules/summernote/summernote-bs4.css') }}">
 @endpush
@@ -9,15 +9,14 @@
 @section('admin-content')
     <section class="section">
         <div class="section-header">
-            <h1>Create Diploma Engineering Course</h1>
+            <h1>Create Event</h1>
         </div>
         <div class="card card-primary">
             <div class="card-header">
-                <h4>Create Diploma Engineering Course</h4>
+                <h4>Create Event</h4>
             </div>
             <div class="card-body">
-                <form action="{{ route('admin.diploma-engineering-course.store') }}" method="POST"
-                    enctype="multipart/form-data">
+                <form action="{{ route('admin.event.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label>Image <code>(PNG Format Image)</code></label>
@@ -26,23 +25,25 @@
                             <input type="file" name="image" id="image-upload" />
                         </div>
                     </div>
-
                     <div class="form-group">
                         <label>Name</label>
                         <input type="text" name="name" value="{{ old('name') }}" class="form-control">
                     </div>
-
                     <div class="form-group">
-                        <label>Month <code>(06 Month)</code></label>
-                        <input type="text" name="month" value="{{ old('month') }}" class="form-control">
+                        <label>Location <code>(Dhanmondi, Dhaka)</code></label>
+                        <input type="text" name="location" value="{{ old('location') }}" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label>Duration <code>(03 Hours)</code></label>
-                        <input type="text" name="duration" value="{{ old('duration') }}" class="form-control">
+                        <label>Date <code>(December-12-2025)</code></label>
+                        <input type="text" name="date" value="{{ old('date') }}" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label>Course Fee <code>(6000 Taka)</code></label>
-                        <input type="text" name="course_fee" value="{{ old('course_fee') }}" class="form-control">
+                        <label>Time <code>(04:00 pm)</code></label>
+                        <input type="text" name="time" value="{{ old('time') }}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Fee <code>(6000 Taka)</code></label>
+                        <input type="text" name="fee" value="{{ old('fee') }}" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>Short Description</label>

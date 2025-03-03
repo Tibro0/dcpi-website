@@ -47,6 +47,15 @@
                 </ul>
             </li>
 
+            <li class="dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-file-alt"></i>
+                    <span>Our Event</span></a>
+                <ul class="dropdown-menu">
+                    <li class="active"><a class="nav-link" href="{{ route('admin.event.index') }}">Events</a>
+                    </li>
+                </ul>
+            </li>
+
             {{-- <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-file-alt"></i>
                     <span>Pages</span></a>

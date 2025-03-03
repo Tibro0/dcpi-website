@@ -57,7 +57,7 @@
                     </div>
                     <div class="form-group">
                         <label>Long Description</label>
-                        <textarea name="long_description" class="form-control summernote">{{ $diplomaEngineeringCourse->long_description }}</textarea>
+                        <textarea name="long_description" class="form-control summernote">{!! $diplomaEngineeringCourse->long_description !!}</textarea>
                     </div>
                     <div class="form-group">
                         <label>Priority Number <code>(Serial Number (like = 1,2,3..))</code></label>
