@@ -104,11 +104,36 @@ namespace App\Models{
 /**
  * 
  *
+ * @property int $id
+ * @property string $top_title
+ * @property string $main_title
+ * @property string|null $button_name
+ * @property string|null $button_url
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageCtaSection newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageCtaSection newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageCtaSection query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageCtaSection whereButtonName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageCtaSection whereButtonUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageCtaSection whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageCtaSection whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageCtaSection whereMainTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageCtaSection whereTopTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageCtaSection whereUpdatedAt($value)
  */
 	class FrontPageCtaSection extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageSuccessStorySection newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageSuccessStorySection newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|FrontPageSuccessStorySection query()
+ */
+	class FrontPageSuccessStorySection extends \Eloquent {}
 }
 
 namespace App\Models{

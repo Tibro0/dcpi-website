@@ -30,6 +30,10 @@
                     <li class="active"><a class="nav-link" href="{{ route('admin.front-page-cta-section.index') }}">Cta
                             Section</a>
                     </li>
+                    <li class="active"><a class="nav-link"
+                            href="{{ route('admin.front-page-success-story-section.index') }}">Success Story
+                            Section</a>
+                    </li>
                 </ul>
             </li>
 

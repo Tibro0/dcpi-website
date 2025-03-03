@@ -1,21 +1,17 @@
-<section class="section bg-cover" data-background="{{ asset('frontend/images/backgrounds/success-story.jpg') }}">
+<section class="section bg-cover" data-background="{{ asset(@$frontPageSuccessStorySection->image) }}">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-sm-4 position-relative success-video">
-                <a class="play-btn venobox" href="https://youtu.be/nA1Aqp0sPQo" data-vbtype="video">
-                    <i class="ti-control-play"></i>
-                </a>
+                @if (@$frontPageSuccessStorySection->video_link)
+                    <a class="play-btn venobox" href="{!! @$frontPageSuccessStorySection->video_link !!}" data-vbtype="video">
+                        <i class="ti-control-play"></i>
+                    </a>
+                @endif
             </div>
             <div class="col-lg-6 col-sm-8">
                 <div class="bg-white p-5">
-                    <h2 class="section-title">Success Stories</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris</p>
+                    <h2 class="section-title">{!! $frontPageSuccessStorySection->title !!}</h2>
+                    <p>{!! $frontPageSuccessStorySection->description !!}</p>
                 </div>
             </div>
         </div>

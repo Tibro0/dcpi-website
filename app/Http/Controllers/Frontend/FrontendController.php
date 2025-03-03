@@ -7,6 +7,7 @@ use App\Models\BannerFeature;
 use App\Models\DiplomaEngineeringCourse;
 use App\Models\FrontPageAboutUsSection;
 use App\Models\FrontPageCtaSection;
+use App\Models\FrontPageSuccessStorySection;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 
@@ -18,6 +19,7 @@ class FrontendController extends Controller
         $frontPageAboutUsSection = FrontPageAboutUsSection::first();
         $diplomaEngineeringCourses = DiplomaEngineeringCourse::orderBy('priority_number', 'asc')->where('status', 1)->get();
         $frontPageCtaSection = FrontPageCtaSection::first();
-        return view('frontend.home.index', compact('sliders', 'bannerFeatures', 'frontPageAboutUsSection', 'diplomaEngineeringCourses', 'frontPageCtaSection'));
+        $frontPageSuccessStorySection = FrontPageSuccessStorySection::first();
+        return view('frontend.home.index', compact('sliders', 'bannerFeatures', 'frontPageAboutUsSection', 'diplomaEngineeringCourses', 'frontPageCtaSection', 'frontPageSuccessStorySection'));
     }
 }
