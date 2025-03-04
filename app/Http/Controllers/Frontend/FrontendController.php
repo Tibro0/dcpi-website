@@ -10,6 +10,7 @@ use App\Models\FrontPageAboutUsSection;
 use App\Models\FrontPageCtaSection;
 use App\Models\FrontPageSuccessStorySection;
 use App\Models\Slider;
+use App\Models\Teacher;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -22,6 +23,7 @@ class FrontendController extends Controller
         $frontPageCtaSection = FrontPageCtaSection::first();
         $frontPageSuccessStorySection = FrontPageSuccessStorySection::first();
         $events= Event::orderBy('priority_number', 'asc')->where('status', 1)->take(3)->get();
-        return view('frontend.home.index', compact('sliders', 'bannerFeatures', 'frontPageAboutUsSection', 'diplomaEngineeringCourses', 'frontPageCtaSection', 'frontPageSuccessStorySection', 'events'));
+        $teachers = Teacher::orderBy('priority_number', 'asc')->where('status', 1)->get();
+        return view('frontend.home.index', compact('sliders', 'bannerFeatures', 'frontPageAboutUsSection', 'diplomaEngineeringCourses', 'frontPageCtaSection', 'frontPageSuccessStorySection', 'events', 'teachers'));
     }
 }

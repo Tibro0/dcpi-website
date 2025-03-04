@@ -77,9 +77,37 @@ namespace App\Models{
 /**
  * 
  *
+ * @property int $id
+ * @property string $image
+ * @property string $name
+ * @property string $slug
+ * @property string $location
+ * @property string $date
+ * @property string $time
+ * @property string $fee
+ * @property string $short_description
+ * @property string $long_description
+ * @property int $priority_number
+ * @property int $status
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Event newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Event newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Event query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Event whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Event whereDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Event whereFee($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Event whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Event whereImage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Event whereLocation($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Event whereLongDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Event whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Event wherePriorityNumber($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Event whereShortDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Event whereSlug($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Event whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Event whereTime($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Event whereUpdatedAt($value)
  */
 	class Event extends \Eloquent {}
 }
@@ -186,6 +214,61 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Slider whereUpdatedAt($value)
  */
 	class Slider extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
+ * @property int $id
+ * @property string $image
+ * @property string $name
+ * @property string $slug
+ * @property string $designation
+ * @property string $short_description
+ * @property string|null $email
+ * @property string|null $whatsapp
+ * @property string|null $facebook_id_name
+ * @property string|null $facebook_url
+ * @property string|null $linkedin_id_name
+ * @property string|null $linkedin_url
+ * @property string|null $twitter_id_name
+ * @property string|null $twitter_url
+ * @property string|null $website
+ * @property string|null $address
+ * @property string|null $address_url
+ * @property string $long_description
+ * @property int $priority_number
+ * @property int $status
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher whereAddress($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher whereAddressUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher whereDesignation($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher whereFacebookIdName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher whereFacebookUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher whereImage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher whereLinkedinIdName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher whereLinkedinUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher whereLongDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher wherePriorityNumber($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher whereShortDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher whereSlug($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher whereTwitterIdName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher whereTwitterUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher whereWebsite($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Teacher whereWhatsapp($value)
+ */
+	class Teacher extends \Eloquent {}
 }
 
 namespace App\Models{

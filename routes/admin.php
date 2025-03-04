@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\FrontPageAboutUsSectionController;
 use App\Http\Controllers\Admin\FrontPageCtaSectionController;
 use App\Http\Controllers\Admin\FrontPageSuccessStorySectionController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\TeacherController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
@@ -37,3 +38,6 @@ Route::put('front-page-success-story-section/update', [FrontPageSuccessStorySect
 
 /** Events Routes */
 Route::resource('event', EventController::class);
+
+/** Teacher Routes */
+Route::resource('teacher', TeacherController::class);
