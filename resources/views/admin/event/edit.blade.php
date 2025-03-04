@@ -4,6 +4,8 @@
     <title>Admin | Event</title>
     <!-- Summernote-->
     <link rel="stylesheet" href="{{ asset('admin/assets/modules/summernote/summernote-bs4.css') }}">
+    <!-- Data Picker css -->
+    <link rel="stylesheet" href="{{ asset('admin/assets/modules/bootstrap-daterangepicker/daterangepicker.css') }}">
 @endpush
 
 @section('admin-content')
@@ -36,8 +38,8 @@
                         <input type="text" name="location" value="{{ $event->location }}" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label>Date <code>(December-12-2025)</code></label>
-                        <input type="text" name="date" value="{{ $event->date }}" class="form-control">
+                        <label>Date</label>
+                        <input type="text" name="date" value="{{ $event->date }}" class="form-control datepicker">
                     </div>
                     <div class="form-group">
                         <label>Time <code>(04:00 pm)</code></label>
@@ -76,6 +78,8 @@
 @endsection
 
 @push('admin-js')
+    <!-- Data Picker js -->
+    <script src="{{ asset('admin/assets/modules/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
     <!-- Summernote js-->
     <script src="{{ asset('admin/assets/modules/summernote/summernote-bs4.js') }}"></script>
     <!-- image-preview js -->

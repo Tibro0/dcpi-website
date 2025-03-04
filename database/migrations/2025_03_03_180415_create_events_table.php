@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('name')->unique();
             $table->string('slug');
             $table->string('location');
-            $table->string('date');
+            $table->date('date');
             $table->string('time');
             $table->string('fee');
             $table->string('short_description');

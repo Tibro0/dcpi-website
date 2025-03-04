@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\BannerFeature;
 use App\Models\DiplomaEngineeringCourse;
+use App\Models\Event;
 use App\Models\FrontPageAboutUsSection;
 use App\Models\FrontPageCtaSection;
 use App\Models\FrontPageSuccessStorySection;
@@ -20,6 +21,7 @@ class FrontendController extends Controller
         $diplomaEngineeringCourses = DiplomaEngineeringCourse::orderBy('priority_number', 'asc')->where('status', 1)->get();
         $frontPageCtaSection = FrontPageCtaSection::first();
         $frontPageSuccessStorySection = FrontPageSuccessStorySection::first();
-        return view('frontend.home.index', compact('sliders', 'bannerFeatures', 'frontPageAboutUsSection', 'diplomaEngineeringCourses', 'frontPageCtaSection', 'frontPageSuccessStorySection'));
+        $events= Event::orderBy('priority_number', 'asc')->where('status', 1)->take(3)->get();
+        return view('frontend.home.index', compact('sliders', 'bannerFeatures', 'frontPageAboutUsSection', 'diplomaEngineeringCourses', 'frontPageCtaSection', 'frontPageSuccessStorySection', 'events'));
     }
 }
